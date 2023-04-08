@@ -1,5 +1,5 @@
-import React from 'react'
-import Landing from '../assets/images/landing.jpeg'
+import React from "react";
+import Landing from "../assets/images/landing.jpeg";
 import {
   Box,
   Button,
@@ -11,44 +11,90 @@ import {
   GridItem,
   Input,
   Image,
+  Heading,
 } from "@chakra-ui/react";
+import ProductCard, { Product } from "./ProductCard";
+import LandingPage from "./LandingPage";
+
+const product: Product = {
+  name: "Lipstick",
+  price: 15,
+  discounted: true,
+  newPrice: 10,
+  photoURL: "../assets/images/lipstick.jpeg",
+  rating: 4.5,
+};
 
 const Main = () => {
   return (
     <>
       {/* Landing */}
 
-      <Box
-        bgImage={Landing}
-        bgPosition="center"
-        bgRepeat="no-repeat"
-        bgSize="cover"
-        textColor="#fff"
-        width="100%"
-        h="90vh"
-      >
-        <Box pos="relative" top="350px" mx="2rem">
-          <Text fontSize="1rem" textShadow="1px 1px #c7c7c7">
-            New collection
-          </Text>
-          <Text fontSize="3rem" textShadow="1px 1px #c7c7c7">
-            The Routine
-          </Text>
-          <Text fontSize="1.5rem" w="550px" textShadow="1px 1px #c7c7c7">
-            New collection of Korean skin care products called 'The Routine'.
-            The new exciting formula, the same price.
-          </Text>
-          <Button w='125px' h='50px' bgColor='red.300' borderRadius='50px' boxShadow='xl' pos='relative' top='25px' left='75px'>Shop Now</Button>
-        </Box>
-      </Box>
-
+      <LandingPage />
       {/* Carousel */}
+
       {/* Grid */}
+      <Heading
+        as="h4"
+        h="2rem"
+        marginTop="1rem"
+        fontSize="xl"
+        justifyContent="center"
+        display="flex"
+      >
+        Popular Products
+      </Heading>
+      <Heading
+        as="h3"
+        h="3rem"
+        fontSize="3xl"
+        justifyContent="center"
+        display="flex"
+      >
+        Best Sellers
+      </Heading>
+      <Grid w="100%" h="50vh" templateColumns="repeat(4, 1fr)" gap="1rem">
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+      </Grid>
+      <Heading
+        mt="1rem"
+        as="h4"
+        h="2rem"
+        fontSize="xl"
+        justifyContent="center"
+        display="flex"
+      >
+        Occasion
+      </Heading>
+      <Heading
+        as="h3"
+        h="3rem"
+        fontSize="3xl"
+        justifyContent="center"
+        display="flex"
+      >
+        Best Prices
+      </Heading>
+      <Grid
+        w="100%"
+        h="50vh"
+        marginBottom="1rem"
+        templateColumns="repeat(4, 1fr)"
+        gap="1rem"
+      >
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+        <ProductCard product={product} />
+      </Grid>
       {/* Discount */}
       {/* Opinions */}
       {/* Feature */}
     </>
   );
-}
+};
 
-export default Main
+export default Main;

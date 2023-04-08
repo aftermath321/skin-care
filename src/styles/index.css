@@ -1,7 +1,22 @@
 @font-face {
-  font-family: "Caviar";   /*Can be any text*/
+  font-family: "Caviar";   
   src: local("CaviarDreamsBold"),
     url("./fonts/CaviarDreams_Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BLOVERLY";   
+  src: local("BLOVERLY"),
+    url("./fonts/BLOVERLY.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Vogue";   
+  src: local("Vogue"),
+    url("./fonts/Vogue.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Activists Regular";   
+  src: local("Activists Regular"),
+    url("./fonts/Activists Regular.ttf") format("truetype");
 }
 
 * {

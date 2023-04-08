@@ -7,8 +7,12 @@ import { ChakraProvider, extendBaseTheme } from "@chakra-ui/react";
 import Fonts from "./components/Fonts";
 
 const theme = extendBaseTheme({
-
-})
+  colors: {
+    pale: {
+      pink: "#fadadd",
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
