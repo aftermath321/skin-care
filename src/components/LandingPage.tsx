@@ -1,5 +1,4 @@
 import React from "react";
-import Landing from "../assets/images/landing.jpeg";
 import {
   Box,
   Button,
@@ -18,13 +17,14 @@ const LandingPage = () => {
   return (
     <>
       <Box
-        bgImage={Landing}
+        bgImage="/images/landing.jpeg"
         bgPosition="center"
         bgRepeat="no-repeat"
         bgAttachment="fixed"
         bgSize="cover"
         width="100%"
         h="90vh"
+        pos='relative'
       ></Box>
       <Box pos="absolute" top="350px" mx="2rem" textColor="#fff">
         <Box>

@@ -12,6 +12,7 @@ const theme = extendBaseTheme({
       pink: "#fadadd",
     },
   },
+
 });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(

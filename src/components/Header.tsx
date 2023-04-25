@@ -22,7 +22,7 @@ const Header = () => {
           fontFamily="BLOVERLY"
           letterSpacing="0.05rem"
         >
-          KR-Skin
+          Clean-Skin
         </Text>
         <Text fontFamily="BLOVERLY" fontWeight="bold" letterSpacing="0.05rem">
           Korean skin care

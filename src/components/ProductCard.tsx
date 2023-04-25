@@ -13,6 +13,7 @@ import {
   Center,
 } from "@chakra-ui/react";
 import React from "react";
+import StarRating from "./StarRating";
 
 export interface Product {
   name: string;
@@ -30,32 +31,40 @@ const ProductCard = (props: { product: Product }) => {
         <>
           <Box display="flex" flexDirection="row" gap="5px">
             <Text textDecorationLine="line-through" textColor="gray.500">
-              {props.product.price}$
+              ${props.product.price}
             </Text>
-            <Text>{props.product.newPrice}$</Text>
+            <Text>${props.product.newPrice}</Text>
           </Box>
         </>
       );
     } else {
       return (
         <>
-          <Text>{props.product.price}$</Text>
+          <Text>${props.product.price}</Text>
         </>
       );
     }
   };
   return (
-    <GridItem p="1rem" pt="0" cursor="pointer" bgColor="pale.pink">
+    <GridItem 
+    p="1rem" 
+    w='300px'
+    pt="0" 
+    cursor="pointer" 
+    bgColor="pale.pink"
+    >
       <Box
-        w="100%"
-        h="80%"
-        bgImage="https://images.pexels.com/photos/2587370/pexels-photo-2587370.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        w="275px"
+        h="400px"
+        bgImage={`url(${props.product.photoURL})`}
         bgSize="contain"
         bgPosition="center"
         bgRepeat="no-repeat"
+        display='flex'
+        justifySelf='flex-start'
       />
-      <Box>
-        <Text>{props.product.rating}</Text>
+      <Box w="330px" justifySelf="center">
+        <StarRating rating={props.product.rating} />
 
         <Text fontWeight="bold" fontSize="1.25rem">
           {props.product.name}

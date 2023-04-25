@@ -1,24 +1,47 @@
 @font-face {
-  font-family: "Caviar";   
+  font-family: "Caviar";
+  src: local("CaviarDreams"), url("./fonts/CaviarDreams.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CaviarBold";
   src: local("CaviarDreamsBold"),
     url("./fonts/CaviarDreams_Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "BLOVERLY";   
-  src: local("BLOVERLY"),
-    url("./fonts/BLOVERLY.ttf") format("truetype");
+  font-family: "BLOVERLY";
+  src: local("BLOVERLY"), url("./fonts/BLOVERLY.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Vogue";   
-  src: local("Vogue"),
-    url("./fonts/Vogue.ttf") format("truetype");
+  font-family: "Vogue";
+  src: local("Vogue"), url("./fonts/Vogue.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Activists Regular";   
+  font-family: "Activists Regular";
   src: local("Activists Regular"),
     url("./fonts/Activists Regular.ttf") format("truetype");
 }
 
 * {
-    font-family: 'Caviar';
+  font-family: "Caviar";
+}
+
+
+
+.ig-gradient {
+ 
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  /* background-clip: text; */
+  /* color: transparent;  */
+  
+}
+.fix:hover{
+
+  font-weight: bold;
 }
