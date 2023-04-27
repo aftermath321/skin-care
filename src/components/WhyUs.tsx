@@ -18,8 +18,8 @@ import { FaTruck } from "react-icons/fa";
 
 const WhyUs = () => {
   return (
-    <Box h={{sm: "auto", md: "20vh"}} w="100%" my='1rem' p='1rem'>
-      <Grid templateColumns={{sm: "repeat(1, 1fr)", md: "repeat(4, 1fr)"}} gap="1rem">
+    <Box h={{base: "auto", md: "20vh"}} w="100%" my='1rem' p='1rem'>
+      <Grid templateColumns={{base: "repeat(1, 1fr)", md: "repeat(4, 1fr)"}} gap="1rem">
         <GridItem
         //   bgColor="pale.pink"
           display="flex"

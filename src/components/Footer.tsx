@@ -25,8 +25,8 @@ const Footer = () => {
       alignContent="center"
       templateColumns={{ sm: "repeat(3, 1fr)", md: "repeat(6, 1fr)" }}
       bgColor="pale.pink"
-      m="1rem"
-      p="1rem"
+      m={{ sm: "0", lg: "1rem" }}
+      p={{ sm: "0", md: "1rem" }}
       rowGap="1rem"
     >
       <GridItem
@@ -95,25 +95,53 @@ const Footer = () => {
         <Grid templateColumns="repeat(3, 1fr) gap='1rem'" templateRows="1">
           <GridItem colSpan={1}>
             <UnorderedList listStyleType="none">
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 HOME
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 MAKEUP
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 SKIN CARE
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 HAIR CARE
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 ACCESSORIES
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 ABOUT
               </ListItem>
-              <ListItem cursor="pointer" w='150px' _hover={{ fontWeight: "900" }}>
+              <ListItem
+                cursor="pointer"
+                w="150px"
+                _hover={{ fontWeight: "900" }}
+              >
                 CONTACT
               </ListItem>
             </UnorderedList>
@@ -175,6 +203,7 @@ const Footer = () => {
         colStart={1}
         display="flex"
         justifyContent="center"
+        alignItems='center'
       >
         <Text>Copyright © 2023 KR-Skin</Text>
       </GridItem>

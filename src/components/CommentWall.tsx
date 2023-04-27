@@ -57,7 +57,7 @@ const CommentWall = () => {
         w="100%"
         my="1rem"
         p="1rem"
-        templateColumns={{sm: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}
+        templateColumns={{base: "repeat(1, 1fr)", md: "repeat(2, 1fr)"}}
       >
         <GridItem
           h="100%"

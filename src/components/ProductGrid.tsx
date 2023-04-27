@@ -11,6 +11,7 @@ import {
   Input,
   Image,
   Heading,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import ProductCard, {Product}  from "./ProductCard";
 
@@ -61,23 +62,17 @@ const ProductGrid = () => {
       >
         Best Sellers
       </Heading>
-      <Grid
+      <SimpleGrid
         w="100%"
-        templateColumns={{
-          sm: "repeat(2, 1fr)",
-          md: "repeat(3, 1fr)",
-          lg: "repeat(4, 1fr)",
-        }}
-        gap="1rem"
-        display="flex"
-        justifyContent="space-around"
-        p="3rem"
+        minChildWidth="155px"
+        spacing={{base: '15px', md: '50px'}}
+        p={{ base: "0rem", md: "2rem" }}
       >
         <ProductCard product={lipstick} />
         <ProductCard product={curology} />
         <ProductCard product={conditioner} />
         <ProductCard product={lipstick} />
-      </Grid>
+      </SimpleGrid>
       <Heading
         mt="1rem"
         as="h4"
@@ -97,20 +92,17 @@ const ProductGrid = () => {
       >
         Best Prices
       </Heading>
-      <Grid
+      <SimpleGrid
         w="100%"
-        p="3rem"
-        marginY="1rem"
-        templateColumns="repeat(4, 1fr)"
-        gap="1rem"
-        display="flex"
-        justifyContent="space-around"
+        minChildWidth="175px"
+        spacing="15px"
+        p={{ base: "1rem", md: "2rem" }}
       >
         <ProductCard product={curology} />
         <ProductCard product={conditioner} />
         <ProductCard product={lipstick} />
         <ProductCard product={curology} />
-      </Grid>
+      </SimpleGrid>
     </>
   );
 };

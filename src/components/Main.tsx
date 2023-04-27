@@ -11,6 +11,7 @@ import {
   Input,
   Image,
   Heading,
+  SimpleGrid,
 } from "@chakra-ui/react";
 import LandingPage from "./LandingPage";
 import CommentWall from "./CommentWall";
@@ -28,7 +29,7 @@ const Main = () => {
 
       {/* Grid */}
 
-      {/* <ProductGrid /> */}
+      <ProductGrid />
       {/* Discount */}
 
       {/* Highlights */}
@@ -37,6 +38,7 @@ const Main = () => {
       <WhyUs />
       {/* Opinions */}
       <CommentWall />
+
     </>
   );
 };

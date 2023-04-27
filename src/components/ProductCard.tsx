@@ -29,7 +29,7 @@ const ProductCard = (props: { product: Product }) => {
     if (props.product.discounted) {
       return (
         <>
-          <Box display="flex" flexDirection="row" gap="5px">
+          <Box display="flex" flexDirection="row" gap="10px">
             <Text textDecorationLine="line-through" textColor="gray.500">
               ${props.product.price}
             </Text>
@@ -46,24 +46,26 @@ const ProductCard = (props: { product: Product }) => {
     }
   };
   return (
-    <GridItem 
-    p="1rem" 
-    w='300px'
-    pt="0" 
-    cursor="pointer" 
-    bgColor="pale.pink"
+    <GridItem
+      w={{ base: "175px", md: "250px", lg: "300px" }}
+      h={{ base: "350px", md: "500px" }}
+      pt="0"
+      cursor="pointer"
+      bgColor="pale.pink"
+      colSpan={1}
+      rowSpan={1}
     >
       <Box
-        w="275px"
-        h="400px"
+        w={{ base: "175px", md: "250px", lg: "300px" }}
+        h={{ base: "250px", md: "400px" }}
         bgImage={`url(${props.product.photoURL})`}
         bgSize="contain"
         bgPosition="center"
         bgRepeat="no-repeat"
-        display='flex'
-        justifySelf='flex-start'
+        display="flex"
+        justifySelf="flex-start"
       />
-      <Box w="330px" justifySelf="center">
+      <Box w={{ base: "175px", md: "250px", lg: "300px" }} justifySelf="center">
         <StarRating rating={props.product.rating} />
 
         <Text fontWeight="bold" fontSize="1.25rem">
